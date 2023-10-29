@@ -5,9 +5,11 @@ Plots:
     Single:
         type: "Line"
         x_key: "time [s]"
+        # ylabel is optinal
         key_list:
             - k1
     Double:
+        # Line field is optional
         x_key: "time [s]"
         ylabel: 'test'
         key_list:
