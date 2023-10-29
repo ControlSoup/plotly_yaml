@@ -83,7 +83,7 @@ def figs_from_yaml(
         else:
             print(
                 f'    ERROR| type field "{type}" it not supported please use:'
-                + '           [Line]'
+                + '\n           [Line]'
             )
             exit(1)
 
