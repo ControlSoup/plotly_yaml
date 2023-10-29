@@ -48,9 +48,16 @@ def figs_from_yaml(
     for plot_name, plot_contents in plot_list.items():
         fig = go.Figure()
 
-        # Required Args
         x_key = plot_contents['x_key']
-        key_list = plot_contents['key_list']
+        # Errors
+        if x_key not in datadict:
+            print(f'    ERROR| x_key "{x_key}" not in csv file')
+            exit(1)
+
+        if plot_name == 'All':
+            key_list = [x for x in datadict if x != x_key]
+        else:
+            key_list = plot_contents['key_list']
 
         # Defaults
         if 'type' not in plot_contents:
@@ -61,10 +68,6 @@ def figs_from_yaml(
         if 'ylabel' not in plot_name:
             ylabel = ''
 
-        # Errors
-        if x_key not in datadict:
-            print(f'    ERROR| x_key "{x_key}" not in csv file')
-            exit(1)
 
         if type == 'Line':
             for key in key_list:
