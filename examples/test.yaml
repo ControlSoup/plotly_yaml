@@ -2,13 +2,13 @@ DataPath: "test.csv"
 
 GroupName: "Test" # This field is your optinal group name
 Plots:
-    Single: # This field becomes your plot name
+    Plot1: # This field becomes your plot name
         type: Line
         x_key: time [s]
         # y_label is optinal
         key_list:
             - k1
-    Double:
+    Plot2:
         # If type is Line this field is not needed
         x_key: time [s]
         y_label: test
