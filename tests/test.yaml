@@ -1,0 +1,15 @@
+DataPath: "test.csv"
+
+Name: "Test"
+Plots:
+    Single:
+        type: "Line"
+        x_key: "time [s]"
+        key_list:
+            - k1
+    Double:
+        x_key: "time [s]"
+        ylabel: 'test'
+        key_list:
+            - k2
+            - k3
