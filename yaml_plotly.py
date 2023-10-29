@@ -44,6 +44,7 @@ def figs_from_yaml(
 
     fig_list = []
 
+
     for plot_name, plot_contents in plot_list.items():
         fig = go.Figure()
 
@@ -86,7 +87,11 @@ def figs_from_yaml(
             )
             exit(1)
 
-        fig_title = f'{group_name}-{plot_name}'
+        if group_name != ('' or ' '):
+            fig_title = f'{group_name}-{plot_name}'
+        else:
+            fig_list = plot_name
+
         fig.update_layout(
             title_text=fig_title,
             xaxis_title=x_key,

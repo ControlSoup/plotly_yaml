@@ -1,17 +1,17 @@
 DataPath: "test.csv"
 
-Name: "Test"
+GrouName: "Test" # This field is your optinal group name
 Plots:
-    Single:
+    Single: # This field becomes your plot name
         type: "Line"
         x_key: "time [s]"
-        # ylabel is optinal
+        # y_label is optinal
         key_list:
             - k1
     Double:
-        # Line field is optional
+        # If type is Line this field is not needed
         x_key: "time [s]"
-        ylabel: 'test'
+        y_label: 'test'
         key_list:
             - k2
             - k3
