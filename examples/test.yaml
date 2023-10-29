@@ -1,6 +1,6 @@
 DataPath: "test.csv"
 
-GrouName: "Test" # This field is your optinal group name
+GroupName: "Test" # This field is your optinal group name
 Plots:
     Single: # This field becomes your plot name
         type: "Line"

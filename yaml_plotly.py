@@ -139,7 +139,7 @@ def main():
 
     # Globals
     DATA_PATH_KEY = "DataPath"
-    PLOT_NAME_KEY = "Name"
+    GROUP_NAME_KEY = "GroupName"
     PLOT_LIST_KEY = "Plots"
 
     # Check Errors
@@ -147,9 +147,10 @@ def main():
         print(f'    ERROR| "{DATA_PATH_KEY}" field not found in yaml')
         exit(1)
 
-    if not PLOT_NAME_KEY in yaml_dict:
-        print(f'    ERROR| "{PLOT_NAME_KEY}" field not found in yaml')
-        exit(1)
+    if not GROUP_NAME_KEY in yaml_dict:
+        group_name = ''
+    else:
+        group_name = yaml_dict[GROUP_NAME_KEY]
 
     if not PLOT_LIST_KEY in yaml_dict:
         print(f'    ERROR| "{PLOT_LIST_KEY}" field not found in yaml')
@@ -160,7 +161,6 @@ def main():
     path = os.path.join(yaml_dir, data_path)
     datadict = csv_to_datadict(path)
 
-    group_name = yaml_dict[PLOT_NAME_KEY]
     plot_dict = yaml_dict[PLOT_LIST_KEY]
 
     # Plot the files
