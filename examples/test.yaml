@@ -18,12 +18,14 @@ Plots:
             - k3
 
     Plot3:
+        # For multiple axis, ensure the sub name is axis#
+        # the number choice is arbitrary, and not used for ordering
         x_key: time [s]
         axis1:
             y_label: axis1
             key_list:
                 - k1
-        axis3: # Numbers don't set the order, location in the text file does
+        axis300:
             y_label: axis2
             key_list:
                 - k2
