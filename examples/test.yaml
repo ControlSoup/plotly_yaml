@@ -3,17 +3,40 @@ DataPath: "test.csv"
 GroupName: "Test" # This field is your optinal group name
 Plots:
     Plot1: # This field becomes your plot name
-        type: Line
+        mode: lines
         x_key: time [s]
-        # y_label is optinal
+        y_label: test
         key_list:
             - k1
+
     Plot2:
-        # If type is Line this field is not needed
+        # If mode is lines this field is not needed
         x_key: time [s]
         y_label: test
         key_list:
             - k2
             - k3
+
+    Plot3:
+        x_key: time [s]
+        axis1:
+            y_label: axis1
+            key_list:
+                - k1
+        axis3: # Numbers don't set the order, location in the text file does
+            y_label: axis2
+            key_list:
+                - k2
+        axis2:
+            y_label: axis3
+            key_list:
+                - k3
+        axis4:
+            y_label: axis4
+            key_list:
+                - k4
+                - k5
+                - k6
+
     All:
         x_key: time [s]
